@@ -21,6 +21,15 @@ export default class Content extends React.Component {
       {
         size: "lg",
         disabled: true
+      },
+      {
+        size: "lg",
+        type: "warning"
+      },
+      {
+        size: "lg",
+        type: "warning",
+        disabled: true
       }
     ];
     return (

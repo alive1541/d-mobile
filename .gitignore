@@ -7,6 +7,8 @@
 /coverage
 
 # production
+/build.sh
+/upload.sh
 /build
 
 # misc
