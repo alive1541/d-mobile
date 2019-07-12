@@ -42,7 +42,7 @@ function insertSpace(child: any) {
 
 class Button extends React.Component<ButtonProps, any> {
   static defaultProps = {
-    prefixCls: "am-button",
+    prefixCls: "d-button",
     size: "large",
     inline: false,
     disabled: false,
@@ -102,7 +102,6 @@ class Button extends React.Component<ButtonProps, any> {
     //     className: rawCls ? `${rawCls} ${cls}` : cls
     //   });
     // }
-
     return (
       <TouchFeedback
         // tslint:disable-next-line:jsx-no-multiline-js

@@ -1,5 +1,6 @@
 import * as React from "react";
-import { Button, WingBlank, WhiteSpace } from "../../components";
+import { Button, WhiteSpace } from "../../components";
+import Wraper from "../base/wraper";
 
 import "./style/index.less";
 
@@ -57,14 +58,10 @@ export default class Content extends React.Component {
     ];
     return (
       <div className="button-wrap">
-        <WingBlank>
-          <WhiteSpace size="lg" />
-          <div className="title-en">Button</div>
-          <WhiteSpace />
-          <div className="title-ch">按钮</div>
+        <Wraper titleEn="Button" titleCh="按钮" {...this.props}>
           {createButtons(btnAry)}
           {createInlineButtons(inlineBtnAry)}
-        </WingBlank>
+        </Wraper>
       </div>
     );
   }
@@ -78,9 +75,9 @@ interface BtnChildProps {
 }
 
 function createButtons(btnAry: BtnChildProps[]) {
-  return btnAry.map(item => {
+  return btnAry.map((item, index) => {
     return (
-      <React.Fragment>
+      <React.Fragment key={index}>
         <WhiteSpace size={item.size} />
         <Button type={item.type} disabled={item.disabled}>
           {item.content}
@@ -93,9 +90,9 @@ function createInlineButtons(btnAry: BtnChildProps[]) {
   return (
     <React.Fragment>
       <WhiteSpace size="lg" />{" "}
-      {btnAry.map(item => {
+      {btnAry.map((item, index) => {
         return (
-          <React.Fragment>
+          <React.Fragment key={index}>
             <Button type={item.type} inline={true} disabled={item.disabled}>
               {item.content}
             </Button>

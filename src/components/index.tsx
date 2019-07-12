@@ -16,3 +16,4 @@ if (
 export { default as Button } from "./button/index";
 export { default as WingBlank } from "./wingBlank/index";
 export { default as WhiteSpace } from "./whiteSpace/index";
+export { default as Modal } from "./modal/index";
