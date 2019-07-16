@@ -8,7 +8,7 @@ if (
 ) {
   // tslint:disable-next-line:no-console
   console.warn(
-    "You are using a whole package of antd-mobile, " +
+    "You are using a whole package of d-mobile, " +
       "please use https://www.npmjs.com/package/babel-plugin-import to reduce app bundle size."
   );
 }
