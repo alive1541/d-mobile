@@ -2,6 +2,8 @@ import * as React from "react";
 import { Button, WhiteSpace, Modal } from "../../components";
 import Wraper from "../base/wraper";
 
+const operation = Modal.operation;
+
 import "./style/index.less";
 
 export default class Content extends React.Component {
@@ -27,6 +29,25 @@ export default class Content extends React.Component {
         content: "带按钮的文本对话框",
         size: "lg",
         onClick: () => this.handleClick("modal2_visible")
+      },
+      {
+        content: "操作弹窗",
+        size: "lg",
+        onClick: () =>
+          operation([
+            {
+              text: "标为已读",
+              onPress: () => {
+                console.log("标为已读");
+              }
+            },
+            {
+              text: "置顶聊天",
+              onPress: () => {
+                console.log("置顶聊天");
+              }
+            }
+          ])
       }
     ];
 

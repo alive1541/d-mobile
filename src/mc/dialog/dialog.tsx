@@ -15,6 +15,7 @@ interface DialogPropsType {
   onClose?: (e: any) => void;
   wrapClassName?: string;
   maskClosable?: boolean;
+  wrapProps?: any;
 }
 
 export default class Dialog extends React.Component<DialogPropsType> {
@@ -101,6 +102,7 @@ export default class Dialog extends React.Component<DialogPropsType> {
         <div
           className={`${prefixCls}-wrap ${props.wrapClassName || ""}`}
           onClick={maskClosable ? this.onMaskClick : undefined}
+          {...props.wrapProps}
         >
           {this.getDialogElement()}
         </div>
